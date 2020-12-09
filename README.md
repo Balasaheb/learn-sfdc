@@ -3,16 +3,17 @@
 ## Cloning Repository 
 Cloning repository means setting up your local environment and pull code from remote repository (FROM GITHUB.COM ), This is one time setup and you need to perform only once per repository, Follow below steps 
 
-1)Open VS Code new window and open terminal window, using cd command , navigate to desired folder
+1) Open VS Code new window and open terminal window, using cd command , navigate to desired folder
     `cd SalesforceBasics`
     now you are inside [SalesforceBasics] folder
-2)Now clone our repository from remote server with below command  , it will clone repository to local
+2) Now clone our repository from remote server with below command  , it will clone repository to local
     `git clone https://github.com/Balasaheb/learn-sfdc.git`
-3)navigate to folder structure using `cd learn-sfdc` 
-4)Use `git branch` and make sure you have GIT initialized there.
-5)Now checkout master branch with below commands (One by One), It will fetch code from master branch to local folder 
+3) Navigate to folder structure using `cd learn-sfdc` 
+4) Use `git branch` and make sure you have GIT initialized there.
+5) Now checkout master branch with below commands (One by One), It will fetch code from master branch to local folder 
     `git checkout master`
     `git fetch --all`
+    
 Now your local files are loaded with remote codebase
 
 
