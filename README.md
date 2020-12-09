@@ -42,28 +42,27 @@ Now you have codebase from remote repository , we need to create SFDX project an
 
 ## Checkout master branch 
 `git checkout master`
+
 `git pull origin master`
 
 
 Now your local files are upto date with master , deploy it to desired or new scratch org as per need
 
-
 Create new feature branch 
+
 `git checkout -b feature/MyModuleone`
 
 
 Add files 
+
 `git add *`    // adding all changed files 
 
 
 `git add FILE_PATH`  // adding individual files 
 
-
 `git commit -m "Adding some message " `  // Adding message to commit 
 
-
 `git push origin feature/MyModuleOne`  // Pushing changes to repo 
-
 
 Now create Pull request and get merged with master branch 
 
