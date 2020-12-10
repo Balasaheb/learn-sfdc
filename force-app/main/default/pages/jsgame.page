@@ -1,6 +1,29 @@
-<apex:page>
-<!-- Begin Default Content REMOVE THIS -->
-<h1>Congratulations</h1>
-This is another demo page
-<!-- End Default Content REMOVE THIS -->
+<apex:page showHeader="false" applyHtmlTag="true" applyBodyTag="false">
+    <head>
+        <apex:slds/>
+    </head>
+    <body class="slds-scope">
+        <div class="slds-grid slds-box">
+            <div class="slds-col slds-box">Column 1</div>
+            <div class="slds-col slds-box">Column 2</div>
+            <div class="slds-col slds-box">Column 3</div>
+        </div>
+
+        <!-- BASIC GRID EXAMPLE -->
+        <div class="slds-grid slds-box">
+            <div class="slds-col slds-size_4-of-6 slds-box">Column 1</div>
+            <div class="slds-col slds-size_1-of-6 slds-box">Column 2</div>
+            <div class="slds-col slds-size_1-of-6 slds-box">Column 3</div>
+        </div>
+   
+        <!-- RESPONSIVE GRID EXAMPLE -->
+        <div class="slds-grid slds-wrap slds-box">
+            <div class="slds-col slds-size_1-of-12 slds-box">A</div>
+            <div class="slds-col slds-size_1-of-12 slds-box">B</div>
+            <div class="slds-col slds-size_4-of-12 slds-box">B</div>
+            <div class="slds-col slds-size_6-of-12 slds-box">B</div>
+        </div>
+        
+        
+    </body>
 </apex:page>
