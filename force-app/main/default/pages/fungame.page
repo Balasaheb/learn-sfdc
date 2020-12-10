@@ -1,0 +1,117 @@
+<apex:page standardStylesheets="false" showHeader="false">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <apex:slds />
+    <div class="slds-scope">
+        <!-- <div class="slds-col slds-size_8-of-12 slds-box">
+            Header 
+        </div>
+        <div class="slds-col slds-size_3-of-12 slds-box">
+            Reset Container
+        </div> -->
+        <div class="slds-col slds-size_12-of-12 slds-box out-container" id="outputcontainer">
+            
+        </div>
+    </div>
+
+    <style type="text/css">
+        .arrow-up {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        
+        border-bottom: 20px solid black;
+        }
+
+        .arrow-down {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        
+        border-top: 20px solid #f00;
+        }
+
+        .arrow-right {
+        width: 0; 
+        height: 0; 
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        
+        border-left: 20px solid green;
+        }
+
+        .arrow-left {
+        width: 0; 
+        height: 0; 
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent; 
+        border-right:20px solid blue; 
+        }
+
+
+
+        .out-container{
+            height:98vh;
+            background-color :aliceblue ;
+        }
+
+        .circle {
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+        }
+
+        .floatingShape{
+            position: fixed ;
+        }
+
+
+
+
+
+        @keyframes flickerAnimation {
+        0%   { opacity:1; }
+        50%  { opacity:0; }
+        100% { opacity:1; }
+        }
+        @-o-keyframes flickerAnimation{
+        0%   { opacity:1; }
+        50%  { opacity:0; }
+        100% { opacity:1; }
+        }
+        @-moz-keyframes flickerAnimation{
+        0%   { opacity:1; }
+        50%  { opacity:0; }
+        100% { opacity:1; }
+        }
+        @-webkit-keyframes flickerAnimation{
+        0%   { opacity:1; }
+        50%  { opacity:0; }
+        100% { opacity:1; }
+        }
+        .animate-flicker {
+        -webkit-animation: flickerAnimation 2s infinite;
+        -moz-animation: flickerAnimation 2s infinite;
+        -o-animation: flickerAnimation 2s infinite;
+            animation: flickerAnimation 2s infinite;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            let shapes = ["circle" ] ;
+            // "arrow-up" , "arrow-down" ,"arrow-left" , "arrow-right"
+            let colorArray = ["red" , "blue" , "green" , "yellow" , "orange" ,"violet" ,"purpule" , "brown"   , "indigo"] ;
+            $("#outputcontainer").mousemove(function(event){
+                var shapeDiv = $("<div/>").
+                    addClass(shapes[Math.floor(Math.random() * shapes.length) ])
+                    .addClass("animate-flicker floatingShape")
+                    .css("left" , event.clientX + "px" )
+                    .css("top", event.clientY + "px")
+                    .css("background-color" , colorArray[Math.floor(Math.random() * colorArray.length) ] ) ;
+                $("body").append(shapeDiv) ;
+            })
+        });
+    </script>
+</apex:page>

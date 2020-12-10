@@ -1,0 +1,37 @@
+<apex:page showHeader="false" applyHtmlTag="true" applyBodyTag="false">
+    <head>
+        <apex:slds></apex:slds>
+    </head>
+    <body class="slds-scope">
+        <div class="slds-grid slds-box">
+            <div class="slds-col slds-size_2-of-12"></div>
+            <div class="slds-col slds-size_4-of-12 slds-box" onclick="handleClickDivB(this);">B</div>
+            <div class="slds-col slds-size_4-of-12 slds-box" onclick="handleClickDivC(this);">B</div>
+            <div class="slds-col slds-size_2-of-12"></div>
+        </div>
+
+        <p class="slds-bold slds-box">
+            This is nice paragraph!!!
+        </p>
+    </body>
+
+    <script type="text/javascript">
+        function handleClickDivB(){
+            console.log("Processing click of first div B") ;
+        } 
+
+        function handleClickDivC(){
+            console.log("Processing click of first div c") ;
+        } 
+
+        const myParagraph = document.querySelector("p") ;
+        myParagraph.addEventListener("click" , function(e){
+            console.log("Paragraph is clicked ") ;
+        }) ;
+
+        myParagraph.addEventListener("mousemove" , function(e){
+            console.log("Mouse Over -----" , window.performance.now()) ;
+        })
+
+    </script>
+</apex:page>
